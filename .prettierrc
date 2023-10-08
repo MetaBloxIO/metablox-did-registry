@@ -1,0 +1,27 @@
+{
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-solidity"],
+  "bracketSpacing": true,
+  "printWidth": 120,
+  "proseWrap": "always",
+  "singleQuote": false,
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "overrides": [
+    {
+      "files": ["*.sol"],
+      "options": {
+        "tabWidth": 4,
+        "printWidth": 120
+      }
+    },
+    {
+      "files": ["*.ts"],
+      "options": {
+        "importOrderParserPlugins": ["typescript"],
+        "importOrderSeparation": true,
+        "importOrderSortSpecifiers": true,
+        "parser": "typescript"
+      }
+    }
+  ]
+}

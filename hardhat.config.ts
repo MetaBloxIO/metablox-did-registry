@@ -18,6 +18,7 @@ export default {
     },
     mainnet: {
       url: `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
+      accounts: [process.env.PRIVATE_KEY],
       saveDeployments: true,
       live: true,
     },
@@ -48,6 +49,7 @@ export default {
     },
     arbitrum: {
       url: `https://arbitrum-mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
+      accounts: [process.env.PRIVATE_KEY],
     },
     arbitrumGoerli: {
       url: `https://arbitrum-goerli.infura.io/v3/${process.env.INFURA_API_KEY}`,
@@ -101,6 +103,7 @@ export default {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
     apiKey: {
+      default: process.env.ETHERSCAN_API_KEY,
       mainnet: process.env.ETHERSCAN_API_KEY,
       goerli: process.env.ETHERSCAN_API_KEY,
       polygonMumbai: process.env.POLYGONSCAN_API_KEY,
@@ -124,7 +127,7 @@ export default {
     flat: false,
   },
   solidity: {
-    version: "0.8.20",
+    version: "0.8.21",
     settings: {
       optimizer: {
         enabled: false,
